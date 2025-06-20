@@ -200,3 +200,19 @@ print(can_construct("a", "b")) # False
 print(can_construct("aa", "ab")) # False  
 print(can_construct("aa", "aab")) # True  
 '''
+
+'''
+#Prompt:
+#Given an array of integers nums and an integer target, return the indices of the two numbers such that they add up to target.
+#You can assume exactly one solution exists, and you cannot reuse the same element twice. You may return the answer in any order.
+
+def two_sum(nums, target):
+    result = []
+    for i in range(len(nums)):
+        for c in range(i + 1, len(nums)):
+            if nums[i] + nums[c] == target:
+                return [i, c]
+
+
+print(two_sum([2, 7, 11, 15], 9)) #[0, 1]
+'''
