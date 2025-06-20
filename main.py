@@ -148,6 +148,7 @@ print(first_unique_char("loveleetcode")) #   2, 'v' is the first unique, at inde
 print(first_unique_char("aabbcc")) #        -1, no unique characters  
 '''
 
+'''
 #Given two strings s and t, return True if t is an anagram of s, and False otherwise.
 #Definition:
 #An anagram is a word formed by rearranging the letters of another, using all original letters exactly once.
@@ -171,3 +172,31 @@ print(is_anagram("anagram", "nagaram")) #True
 print(is_anagram("rat", "car")) #False
 print(is_anagram("listen", "silent")) #True
 print(is_anagram("aacc", "ccac")) #False
+'''
+
+'''
+#Return True if the ransom_note can be constructed using the characters in magazine.
+#Each letter in magazine can only be used once.
+
+def can_construct(ransom_note, magazine):
+    ch_count = {}
+
+    for ch in magazine:
+        if ch in ch_count:
+            ch_count[ch] += 1
+        else:
+            ch_count[ch] = 1
+    
+    for ch in ransom_note:
+        if ch not in ch_count or ch_count[ch] == 0:
+            return False
+        ch_count[ch] -= 1
+    return True
+
+
+
+
+print(can_construct("a", "b")) # False  
+print(can_construct("aa", "ab")) # False  
+print(can_construct("aa", "aab")) # True  
+'''
