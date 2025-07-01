@@ -35,6 +35,7 @@ test_numbers = [
     "123456789"      # Too short
 ]
 
+
 # Run tests
 for num in test_numbers:
     result = convert_number(num)
